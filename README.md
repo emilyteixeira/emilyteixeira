@@ -16,7 +16,9 @@
 
 ## 👋 Sobre mim
 
-Sou **Emily**, de **Marabá, Pará**. Trabalho com **documentação de software** em uma empresa de tecnologia em crescimento e estou construindo meu caminho para **Engenharia de Machine Learning / Visão Computacional**.
+Sou **Emily**, natural de **Fortaleza, Ceará**, e moro em **Marabá, Pará**. Estou construindo meu caminho para **Engenharia de Machine Learning / Visão Computacional**.
+
+- 💼 **Disponível para trabalhos freelance** em visão computacional, machine learning e desenvolvimento web. Fale comigo pela seção [Contato](#-contato).
 
 - 🔭 Já levei **4 projetos de visão computacional do zero ao deploy** (coleta de dados em campo, anotação, treino de YOLOv8/11/12 e front end).
 - 🎓 Cursando **pós-graduação em Visão Computacional** e **licenciatura em Computação (IFPA)**.
@@ -154,7 +156,7 @@ Sou **Emily**, de **Marabá, Pará**. Trabalho com **documentação de software*
 
 ## 💼 Experiência
 
-- 📝 **Documentação de software**: estabeleço e mantenho práticas de documentação para os times de desenvolvimento e produto.
+- 📝 **Documentação de software**: estabeleci e mantive práticas de documentação para os times de desenvolvimento e produto.
 - 👁️ **Visão computacional industrial**: 4 projetos do zero ao deploy, da coleta de dados em campo à interface final, com YOLOv8/11/12 treinado em GPU NVIDIA RTX 4060.
 - 🌐 **Desenvolvimento web**: sites, APIs e aplicações full stack em JavaScript, TypeScript e Python.
 
