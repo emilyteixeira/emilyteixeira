@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-labelledby="t d">
+  <title id="t">Emily Teixeira - Visão Computacional e Machine Learning</title>
+  <desc id="d">Capa colorida com um sol em formato de lente de câmera, caixas de detecção de objetos e uma rede neural sobre um céu de entardecer.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a0b4b"/>
+      <stop offset="0.45" stop-color="#7b1fa2"/>
+      <stop offset="0.8" stop-color="#ff6b9d"/>
+      <stop offset="1" stop-color="#ffb74d"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff8c4"/>
+      <stop offset="0.45" stop-color="#ffd54f"/>
+      <stop offset="0.8" stop-color="#ff8a65"/>
+      <stop offset="1" stop-color="#ff4081"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd54f" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffd54f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="river" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00e5b0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#00695c" stop-opacity="0.9"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <clipPath id="round"><rect width="1200" height="360" rx="24"/></clipPath>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+  </defs>
+
+  <style>
+    .t-small { font: 600 24px 'Segoe UI', Arial, sans-serif; fill: #ffe0f0; letter-spacing: 3px; }
+    .t-name  { font: 800 72px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+    .t-sub   { font: 600 28px 'Segoe UI', Arial, sans-serif; fill: #fff3c4; }
+    .t-loc   { font: 500 20px 'Segoe UI', Arial, sans-serif; fill: #ffd6e8; letter-spacing: 2px; }
+    .lbl     { font: 700 13px 'Courier New', monospace; fill: #0b0630; }
+    .spin    { transform-origin: 930px 175px; animation: spin 24s linear infinite; }
+    .spin2   { transform-origin: 930px 175px; animation: spin 38s linear infinite reverse; }
+    .pulse   { transform-origin: 930px 175px; animation: pulse 4s ease-in-out infinite; }
+    .dash    { stroke-dasharray: 10 8; animation: dash 3s linear infinite; }
+    .blink   { animation: blink 3.2s ease-in-out infinite; }
+    .blink2  { animation: blink 4.4s ease-in-out infinite 1s; }
+    .float   { animation: float 6s ease-in-out infinite; }
+    @keyframes spin  { to { transform: rotate(360deg); } }
+    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+    @keyframes dash  { to { stroke-dashoffset: -36; } }
+    @keyframes blink { 0%,100% { opacity: 0.25; } 50% { opacity: 1; } }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+  </style>
+
+  <g clip-path="url(#round)">
+    <rect width="1200" height="360" fill="url(#sky)"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
+
+    <!-- brilho do sol -->
+    <circle cx="930" cy="175" r="190" fill="url(#glow)" class="pulse"/>
+
+    <!-- rio ao fundo (Tocantins / Itacaiúnas) -->
+    <path d="M0 300 Q 200 280 400 302 T 800 296 T 1200 300 V360 H0 Z" fill="url(#river)"/>
+    <path d="M0 322 Q 220 308 430 324 T 850 320 T 1200 324" fill="none" stroke="#b2ffe9" stroke-opacity="0.45" stroke-width="2"/>
+    <path d="M0 338 Q 260 328 520 340 T 1200 338" fill="none" stroke="#b2ffe9" stroke-opacity="0.3" stroke-width="2"/>
+
+    <!-- lente-sol: anéis de abertura -->
+    <g class="spin">
+      <circle cx="930" cy="175" r="128" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="2" stroke-dasharray="4 14"/>
+    </g>
+    <g class="spin2">
+      <circle cx="930" cy="175" r="108" fill="none" stroke="#00e5b0" stroke-opacity="0.9" stroke-width="3" stroke-dasharray="30 12 6 12"/>
+    </g>
+    <g class="pulse">
+      <circle cx="930" cy="175" r="84" fill="url(#sun)"/>
+      <circle cx="930" cy="175" r="84" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="3"/>
+      <circle cx="930" cy="175" r="38" fill="#2a0a4f"/>
+      <circle cx="930" cy="175" r="38" fill="none" stroke="#ffd54f" stroke-width="3"/>
+      <circle cx="914" cy="159" r="11" fill="#ffffff" opacity="0.9"/>
+      <circle cx="945" cy="190" r="5" fill="#ffffff" opacity="0.6"/>
+    </g>
+
+    <!-- caixas de detecção -->
+    <g class="float">
+      <rect x="800" y="40" width="260" height="270" rx="6" fill="none" stroke="#00e5b0" stroke-width="3" class="dash"/>
+      <rect x="800" y="18" width="128" height="22" rx="4" fill="#00e5b0"/>
+      <text x="808" y="34" class="lbl">dev  0.99</text>
+    </g>
+    <g>
+      <rect x="1090" y="60" width="86" height="104" rx="6" fill="none" stroke="#ffd54f" stroke-width="3" class="dash"/>
+      <rect x="1090" y="38" width="96" height="22" rx="4" fill="#ffd54f"/>
+      <text x="1097" y="54" class="lbl">ml  0.97</text>
+    </g>
+    <g>
+      <rect x="690" y="200" width="78" height="86" rx="6" fill="none" stroke="#ff80ab" stroke-width="3" class="dash"/>
+      <rect x="690" y="178" width="108" height="22" rx="4" fill="#ff80ab"/>
+      <text x="697" y="194" class="lbl">yolo  0.95</text>
+    </g>
+
+    <!-- mosaico de pixels -->
+    <g>
+      <rect x="1108" y="214" width="16" height="16" fill="#00e5b0" class="blink"/>
+      <rect x="1124" y="214" width="16" height="16" fill="#ffd54f" class="blink2"/>
+      <rect x="1140" y="214" width="16" height="16" fill="#ff80ab" class="blink"/>
+      <rect x="1108" y="230" width="16" height="16" fill="#ff80ab" class="blink2"/>
+      <rect x="1124" y="230" width="16" height="16" fill="#7c4dff" class="blink"/>
+      <rect x="1140" y="230" width="16" height="16" fill="#00e5b0" class="blink2"/>
+      <rect x="1108" y="246" width="16" height="16" fill="#ffd54f" class="blink"/>
+      <rect x="1124" y="246" width="16" height="16" fill="#00e5b0" class="blink2"/>
+      <rect x="1140" y="246" width="16" height="16" fill="#7c4dff" class="blink"/>
+    </g>
+
+    <!-- rede neural -->
+    <g stroke="#ffffff" stroke-opacity="0.55" stroke-width="1.5">
+      <line x1="650" y1="45" x2="715" y2="70"/><line x1="650" y1="45" x2="715" y2="120"/>
+      <line x1="650" y1="95" x2="715" y2="70"/><line x1="650" y1="95" x2="715" y2="120"/>
+      <line x1="650" y1="145" x2="715" y2="70"/><line x1="650" y1="145" x2="715" y2="120"/>
+    </g>
+    <g>
+      <circle cx="650" cy="45" r="9" fill="#00e5b0" class="blink"/>
+      <circle cx="650" cy="95" r="9" fill="#ffd54f" class="blink2"/>
+      <circle cx="650" cy="145" r="9" fill="#ff80ab" class="blink"/>
+      <circle cx="715" cy="70" r="9" fill="#ff80ab" class="blink2"/>
+      <circle cx="715" cy="120" r="9" fill="#00e5b0" class="blink"/>
+    </g>
+
+    <!-- texto -->
+    <text x="64" y="104" class="t-small">OLÁ, EU SOU A</text>
+    <text x="60" y="190" class="t-name">Emily Teixeira</text>
+    <text x="64" y="240" class="t-sub">Visão Computacional  ·  Machine Learning</text>
+    <text x="64" y="282" class="t-loc">MARABÁ · PARÁ · BRASIL</text>
+    <rect x="64" y="298" width="220" height="6" rx="3" fill="#00e5b0"/>
+    <rect x="292" y="298" width="90" height="6" rx="3" fill="#ffd54f"/>
+    <rect x="390" y="298" width="44" height="6" rx="3" fill="#ff80ab"/>
+  </g>
+</svg>
