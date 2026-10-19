@@ -134,8 +134,6 @@ Sou **Emily**, natural de **Fortaleza, Ceará**, e moro em **Marabá, Pará**. E
 
 </div>
 
-> As estatísticas são geradas ao vivo pelos serviços acima e consideram apenas repositórios próprios (forks ficam de fora). Para incluir contribuições privadas, ative "Private contributions" em Settings → Profile.
-
 ---
 
 ## 🎓 Estudando agora
